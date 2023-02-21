@@ -1,0 +1,70 @@
+body{
+    background-image: linear-gradient(to bottom right, rgb(14, 170, 242), rgb(40, 44, 55));
+}
+
+main{
+    width: 75%;
+}
+
+#carouselExampleIndicators{
+    height: 60vh;
+    overflow:hidden;
+    justify-content: center;
+}
+
+aside{
+    width: 24%;
+    position: absolute;
+    right: 2%;
+    top:80vh;
+    height: auto;
+    border-radius: 2vh;
+    background-image: linear-gradient(to bottom right, rgb(174, 143, 218), rgb(135, 143, 165));
+}
+
+aside2{
+    width: 24%;
+    position: absolute;
+    right: 2%;
+    top: 170vh;
+    height: 50vh;
+    border-radius: 2vh;
+    background-image: linear-gradient(to bottom right, rgb(174, 143, 218), rgb(135, 143, 165));
+}
+
+.cat{
+    font-size: 4vh;
+}
+
+#cat-lst{
+    height: 80vh;
+    overflow: auto;
+}
+
+#blc-lst{
+    height: 40vh;
+    overflow: auto;
+}
+
+.card{
+    background-image: linear-gradient(to bottom right, rgb(237, 241, 242), rgb(134, 155, 212));
+    margin-bottom: 4px;
+}
+
+.card:hover{
+    background-image:  linear-gradient(to bottom right, rgb(59, 177, 206), rgb(134, 155, 212));;
+}
+
+.trnd{
+    font-size: 5vh;
+    margin-bottom: 2%;
+}
+
+.latest{
+    font-size: 5vh;
+    margin-bottom: 2%;
+}
+
+.row{
+    margin-right: 0%;
+}
