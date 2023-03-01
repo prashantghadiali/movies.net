@@ -52,7 +52,7 @@ aside2{
 }
 
 .card:hover{
-    background-image:  linear-gradient(to bottom right, rgb(59, 177, 206), rgb(134, 155, 212));;
+    background-image:  linear-gradient(to bottom right, rgb(59, 177, 206), rgb(134, 155, 212));
 }
 
 .trnd{
@@ -67,4 +67,46 @@ aside2{
 
 .row{
     margin-right: 0%;
+}
+
+@media only screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+    aside2 {
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+    .pagination{
+        margin-left: 50px;
+    }
+    .form-control{
+        width: 50%;
+        float: right;
+        margin-left: 30%;
+    }
+    #carouselExampleIndicators{
+        height: auto;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    aside {
+        top: 100vh;
+        height: auto;
+    }
+
+    aside2{
+        top: 200vh;
+        height: auto;
+    }
+
+    .lat-media{
+        height: 100vh;
+        overflow: auto;
+    }
+    
+
 }
