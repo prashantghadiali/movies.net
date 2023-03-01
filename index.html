@@ -26,16 +26,28 @@
                 <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="./contact us/contact.html">Contact Us</a>
             </li>
         </ul>
+
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search">
+            <input id="searchbar" class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search">
             <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
+
+        <div class="movie-list">
+            <div id="movies" class="movies">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg" alt="" srcset="">
+                <div class="movie-details">
+                    <h6>Title:</h6>
+                    <p>Year:</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </nav>
 
 <body>
     <!-- slider picture (carousel) -->
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel poster slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -43,13 +55,13 @@
         </div>
         <div class="carousel-inner ratio ratio-16x9">
             <div class="carousel-item active ratio">
-            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/863E75A035911DBA10F8D7EE1E433A12A1BF4915670B66597AC31C585A291942/scale?width=1200&aspectRatio=1.78&format=jpeg" class="d-block w-100" alt="...">
+            <img src="..." class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item active ratio">
-            <img src="https://images.thedirect.com/media/article_full/thor-love-and-thunder-tickets-sale-date.jpg?imgeng=cmpr_75/" class="d-block w-100" alt="...">
+            <img src="..." class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item active ratio">
-            <img src="https://images.thedirect.com/media/article_full/aquaman-2-art.jpg" class="d-block w-100" alt="...">
+            <img src="..." class="d-block w-100" alt="...">
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -98,13 +110,23 @@
                         <button class="btn btn-outline-secondary" type="submit">Click to watch</button>
                     </div>
                 </div>
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-secondary" type="submit">Click to watch</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- trending movies end -->
 
         <!-- Latest Uploaded Movies -->
         <div class="latest m-5">Latest Uploaded Movies:</div>
-        <div class="row row-cols-1 p-5 pt-0 pr-0 row-cols-md-3 g-4 lat-media">
+        <div class="row row-cols-1 p-5 pt-0 pr-0 row-cols-md-4 g-5 lat-media">
             <div class="col">
                 <div class="card h-100">
                     <img src="..." class="card-img-top" alt="...">
@@ -129,15 +151,6 @@
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
             </div>
