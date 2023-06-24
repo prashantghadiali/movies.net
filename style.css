@@ -10,6 +10,18 @@ main{
     width: 400px;
 }
 
+.movie-list{
+    position: absolute;
+    background: white;
+    float: right;
+    width: 394px;
+    z-index: 99;
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    padding: 10px;
+    scroll-behavior: auto;
+}
+
 #movies{
     position: absolute;
     display: flex;
@@ -34,6 +46,8 @@ main{
     width: 70px;
     height: 70px;
     object-fit: cover;
+    position: absolute;
+    margin-left: 40vh;
     border-radius: 2vh;
 }
 
@@ -47,18 +61,8 @@ aside{
     width: 24%;
     position: absolute;
     right: 2%;
-    top:80vh;
+    top: 25vh;
     height: auto;
-    border-radius: 2vh;
-    background-image: linear-gradient(to bottom right, rgb(174, 143, 218), rgb(135, 143, 165));
-}
-
-aside2{
-    width: 24%;
-    position: absolute;
-    right: 2%;
-    top: 170vh;
-    height: 50vh;
     border-radius: 2vh;
     background-image: linear-gradient(to bottom right, rgb(174, 143, 218), rgb(135, 143, 165));
 }
@@ -73,7 +77,7 @@ aside2{
 }
 
 #blc-lst{
-    height: 40vh;
+    height: auto;
     overflow: auto;
 }
 

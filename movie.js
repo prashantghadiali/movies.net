@@ -13,7 +13,6 @@ async function loadApi(searchData){
     const resp = await fetch(`${prom}`);
     const data = await resp.json();
     if(data.Response == "True"){
-        
         // if any of the data is in data arr then it will call this
         dataList(data.Search);
     }
@@ -32,30 +31,31 @@ function findBySearch(){
     console.log(searchData);
 }
 
+
 function dataList(movieData){
     movielist.innerHTML = "";
     for(let mid = 0; mid < movieData.length; mid++){
         let movieItem = document.createElement("div");
         movieItem.dataset.id = movieData[mid].imdbID;
         movieItem.classList.add('movies');
-        console.log(movieItem);
+        console.log("movie item", movieItem);
         if(movieData[mid].Poster != "N/A" ){
-            mPoster = "./image/movies.net.png"
-            console.log("poster not avl", mPoster);
-        } else{
-            mPoster = movieData[mid].Poster;
+            var mPoster = movieData[mid].Poster;
             console.log("poster", mPoster);
-            movieItem.innerHTML = `
-            <img src="https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg" alt="">
-
-                <img src="${mPoster}" alt="poster" id="ser_post" srcset="">
-                <div class="movie-details">
-                    <h6>${movieData[mid].Title}</h6>
-                    <p id="year">${movieData[mid].Year}</p>
-                </div>
-            `
+        } else{
+            movieData[mid].Poster = "./image/movies.net.png"
         }
+        movieItem.innerHTML = `
+            <img src="${movieData[mid].Poster}" alt="poster" id="ser_post" srcset="">
+            <br>
+            <div class="movie-details ">
+                <h6>${movieData[mid].Title}</h6>
+                <p id="year">${movieData[mid].Year}</p>
+            </div>
+        `
+        
         movielist.appendChild(movieItem)
+        console.log("movie list", movielist);
     }
 }
 
