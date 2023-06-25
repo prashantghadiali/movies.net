@@ -2,6 +2,12 @@ body{
     background-image: linear-gradient(to bottom right, rgb(14, 170, 242), rgb(40, 44, 55));
 }
 
+.contactBody{
+    background-image: linear-gradient(to bottom right, rgb(14, 170, 242), rgb(40, 44, 55));
+    height: 100vh;
+    color: aliceblue;
+}
+
 main{
     width: 75%;
 }
