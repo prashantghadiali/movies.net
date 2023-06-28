@@ -73,42 +73,65 @@ function loadDetails(){
             const clickDataDetails = await clickData.json();
             console.log("Data Selected",clickDataDetails);
             displaySelected(clickDataDetails);
+            // displaySelectedMovies();
         })
     })
 }
 
 let append = document.getElementById("append");
+var selectedId = "Id";
 var selectedTitle = "Title";
 var selectedPoster = "Poster";
+var selectedPlot = "Plot";
 var selectedYear = "Year";
+
+
 function displaySelected(selected){
+    // alert(`In Display Selected Function ${selected}`)
+    localStorage.setItem(selectedId, selected.imdbID);
     localStorage.setItem(selectedTitle, selected.Title);
     localStorage.setItem(selectedPoster , selected.Poster);
+    localStorage.setItem(selectedPlot , selected.Plot);
     localStorage.setItem(selectedYear , selected.Year);
     location.pathname = "/movie_page/movies.html";
-    append.addEventListener("onload",  () => {
-        console.log("Data Selected",movieDataDetails);
-        let appendItem = document.createElement("div");
-        appendItem.classList.add('card');
-        appendItem.classList.add('text-center');
-        console.log(appendItem);
-        append.innerHTML += `
-                <div class="card-body">
-                    <img src="${(localStorage.Poster != "N/A") ? localStorage.Poster : "/image/movies.net.png"}" class="" alt="Poster">
-                    <br>
-                    <br>
-                    <h5 class="card-title">Title: ${localStorage.Title}</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-title">Genre : </p>
-                    <a href="#" class="btn btn-primary">Add To Favourits</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Year : ${localStorage.Year}
-                </div>
-        `
-    })
-
 }
+displaySelected().then(response => {
+    console.log(response);
+}).catch(e => {
+    console.log(e);
+});
+
+
+function displaySelectedMovies(){
+    let append = document.getElementById("append");
+    let appendItem = document.createElement("div");
+    appendItem.classList.add('card');
+    appendItem.classList.add('text-center');
+    // console.log(appendItem);
+    append.innerHTML = `
+        <div class="card text-center">
+            <div class="card-body">
+                <img src="${(localStorage.Poster != "N/A") ? localStorage.Poster : "/image/movies.net.png"}" class="" alt="Poster">
+                <br>
+                <br>
+                <h5 class="card-title">Title:&nbsp;${localStorage.Title}</h5>
+                <p class="card-text"><b>Plot :</b>&nbsp;${localStorage.Plot}</p>
+                <a href="#" class="btn btn-primary">Add To Favourits</a>
+                <a href="/" class="btn btn-success">Back to Home</a>
+            </div>
+            <div class="card-footer text-muted">
+                Year : ${localStorage.Year}
+            </div>
+        </div>
+    `;
+}
+displaySelectedMovies().then(response => {
+    console.log(response);
+}).catch(e => {
+    console.log(e);
+});
+
+
 
 // click outside of search list -> list disapeears
 window.addEventListener("click", (e) => {

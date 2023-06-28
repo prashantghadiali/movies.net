@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="/movie.js"></script>
 </head>
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg bg-dark">
@@ -25,15 +26,12 @@
                 <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="/contact us/contact.html">Contact Us</a>
             </li>
         </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search">
-        </form>
     </div>
 </nav>
 <body>
     <div>
         <!-- apeended while click -->
-            <div class="trending m-5 append" id="append" >
+            <div class="trending m-5 append" id="append" onload="displaySelectedMovies()" >
                 <!-- <div class="card text-center">
                     <div class="card-body">
                         <img src="/image/movies.net.png" class="" alt="...">
@@ -55,6 +53,6 @@
     <p style="color: aliceblue;"> &copy; 2023 by movies.net. All Rights Reserved. Powered by <a href="https://prashantghadiali.com">Prashant Ghadiali</a></p>
 
     <a href="mailto:admin@prashantghadiali.com">IF YOU HAVE ANY ISSUE OR WANT TO CONTACT US ON MAIL  admin@prashantghadiali.com</a>
-    <script src="/movie.js"></script>
+    <script src="/movie_page/moviepage.js"></script>
 </footer>
 </html>
