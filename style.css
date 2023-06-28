@@ -144,7 +144,7 @@ aside{
 
 @media only screen and (max-width: 768px) {
     aside {
-        top: 100vh;
+        top: 61vh;
         height: auto;
     }
 

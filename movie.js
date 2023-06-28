@@ -7,7 +7,12 @@ const form = document.getElementById("form");
 const serch_poster = document.getElementById("ser_post");
 let file_home = document.getElementsByTagName("main");
 const appendedResult = document.getElementsByClassName("append");
-
+const card = document.querySelectorAll(".card");
+var selectedId = "Id";
+var selectedTitle = "Title";
+var selectedPoster = "Poster";
+var selectedPlot = "Plot";
+var selectedYear = "Year";
 
 async function loadApi(searchData){
     const prom = `https://omdbapi.com/?s=${searchData}&page=1&apikey=2982e8a6`;
@@ -19,6 +24,27 @@ async function loadApi(searchData){
     }
     
 }
+
+
+card.forEach((item) => {
+    item.addEventListener("click", function  () {
+        console.log("click", item);
+        console.log("Item ID :",item.id);
+        let Title = document.getElementById(item.id).getElementsByClassName("card-title")[0].innerHTML;
+        let Poster = document.getElementById(item.id).getElementsByClassName("card-img-top")[0].src;
+        let Plot = document.getElementById(item.id).getElementsByClassName("card-text")[0].innerHTML;
+        let Year = document.getElementById(item.id).getElementsByClassName("card-footer")[0].innerHTML;
+        console.log("Title :", Title);
+        console.log("Poster :", Poster);
+        console.log("Poster :", Plot);
+        localStorage.setItem(selectedId, item.id);
+        localStorage.setItem(selectedTitle, Title);
+        localStorage.setItem(selectedPoster , Poster);
+        localStorage.setItem(selectedPlot , Plot);
+        localStorage.setItem(selectedYear , Year);
+        location.pathname = "/movie_page/movies.html";
+    });
+});
 
 function findBySearch(){
     let searchData = searchbar.value.trim();
@@ -79,12 +105,6 @@ function loadDetails(){
 }
 
 let append = document.getElementById("append");
-var selectedId = "Id";
-var selectedTitle = "Title";
-var selectedPoster = "Poster";
-var selectedPlot = "Plot";
-var selectedYear = "Year";
-
 
 function displaySelected(selected){
     // alert(`In Display Selected Function ${selected}`)
@@ -114,7 +134,7 @@ function displaySelectedMovies(){
                 <img src="${(localStorage.Poster != "N/A") ? localStorage.Poster : "/image/movies.net.png"}" class="" alt="Poster">
                 <br>
                 <br>
-                <h5 class="card-title">Title:&nbsp;${localStorage.Title}</h5>
+                <h5 class="card-title">${localStorage.Title}</h5>
                 <p class="card-text"><b>Plot :</b>&nbsp;${localStorage.Plot}</p>
                 <a href="#" class="btn btn-primary">Add To Favourits</a>
                 <a href="/" class="btn btn-success">Back to Home</a>
@@ -139,3 +159,5 @@ window.addEventListener("click", (e) => {
         movielist.classList.add('hideClass');
     }
 })
+
+
